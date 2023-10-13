@@ -1,11 +1,12 @@
-import { StyleSheet } from 'react-native'
-import { colors } from '../../constants/colors'
+import { StyleSheet } from "react-native";
+import { colors } from "../../constants/colors";
 
 export default styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.blue,
   },
   image: {
     width: 200,
@@ -14,6 +15,6 @@ export default styles = StyleSheet.create({
   cameraButton: {
     backgroundColor: colors.secondary,
     height: 50,
-    width: '100%',
+    width: "100%",
   },
-})
+});

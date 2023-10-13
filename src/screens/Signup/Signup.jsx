@@ -1,30 +1,30 @@
-import { Pressable, Text, TextInput, View } from 'react-native'
-import React, { useState } from 'react'
+import { Pressable, Text, TextInput, View } from "react-native";
+import React, { useState } from "react";
 
-import { TextInput as Input } from 'react-native-paper'
-import { setUser } from '../../features/auth/authSlice'
-import styles from './Signup.styles'
-import { useDispatch } from 'react-redux'
-import { useSignUpMutation } from '../../services/authApi'
+import { TextInput as Input } from "react-native-paper";
+import { setUser } from "../../features/auth/authSlice";
+import styles from "./Signup.styles";
+import { useDispatch } from "react-redux";
+import { useSignUpMutation } from "../../services/authApi";
 
 const Signup = ({ navigation }) => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPass, setConfirmPass] = useState('')
-  const [triggerSignup, result] = useSignUpMutation()
-  const dispatch = useDispatch()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+  const [triggerSignup, result] = useSignUpMutation();
+  const dispatch = useDispatch();
 
   const onSubmit = () => {
-    console.log(email, password, confirmPass)
+    console.log(email, password, confirmPass);
     triggerSignup({
       email,
       password,
-    })
-    console.log(result)
+    });
+    console.log(result);
     if (result.isSuccess) {
-      dispatch(setUser(result.data))
+      dispatch(setUser(result.data));
     }
-  }
+  };
 
   return (
     <View style={styles.container}>
@@ -47,18 +47,18 @@ const Signup = ({ navigation }) => {
           onChangeText={setConfirmPass}
         />
         <Pressable style={styles.loginButton} onPress={onSubmit}>
-          <Text style={{ color: 'white' }}>Sign up</Text>
+          <Text style={{ color: "white" }}>Sign up</Text>
         </Pressable>
         <Text>Already have an account?</Text>
         <Pressable
           style={styles.loginButton}
-          onPress={() => navigation.navigate('Login')}
+          onPress={() => navigation.navigate("Login")}
         >
-          <Text style={{ color: 'white' }}>Login</Text>
+          <Text style={{ color: "white" }}>Login</Text>
         </Pressable>
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default Signup
+export default Signup;

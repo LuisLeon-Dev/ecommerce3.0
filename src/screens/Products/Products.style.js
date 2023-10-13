@@ -1,10 +1,10 @@
-import { StyleSheet } from 'react-native'
-import { colors } from '../../constants/colors'
+import { StyleSheet } from "react-native";
+import { colors } from "../../constants/colors";
 
 export default styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    backgroundColor: colors.blue,
   },
   listContainer: {
     flex: 1,
@@ -12,29 +12,29 @@ export default styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
   weapperStyle: {
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   productContainer: {
-    width: '47%',
+    width: "47%",
     backgroundColor: colors.grey,
     marginBottom: 20,
-    alignItems: 'flex-start',
+    alignItems: "flex-start",
     paddingVertical: 15,
     paddingHorizontal: 10,
     borderRadius: 15,
     gap: 10,
   },
   image: {
-    alignSelf: 'center',
+    alignSelf: "center",
     height: 150,
     width: 150,
   },
   title: {
-    fontWeight: '700',
-    fontVariant: 'small-caps',
+    fontWeight: "700",
+    fontVariant: "small-caps",
   },
   price: {
     fontSize: 20,
-    fontVariant: '',
+    fontVariant: "",
   },
-})
+});
